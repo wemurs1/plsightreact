@@ -1,3 +1,11 @@
-﻿namespace Api.Dtos;
+﻿using System.ComponentModel.DataAnnotations;
 
-public record HouseDetailsDto(int Id, string? Address, string? Country, int Price, string? Description, string? Photo);
+namespace Api.Dtos;
+
+public record HouseDetailsDto(
+    int Id,
+    [property: Required] string? Address,
+    [property: Required] string? Country,
+    int Price,
+    string? Description,
+    string? Photo);

@@ -72,6 +72,6 @@ public class HouseRepository : IHouseRepository
 
     private static HouseDetailsDto EntityToDetailDto(HouseEntity e)
     {
-        return new HouseDetailsDto(e.Id, e.Address, e.Country, e.Price, e.Description, e.Country);
+        return new HouseDetailsDto(e.Id, e.Address, e.Country, e.Price, e.Description, e.Photo);
     }
 }
