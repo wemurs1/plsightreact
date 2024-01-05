@@ -4,6 +4,7 @@ import ApiStatus from '../ApiStatus';
 import { currencyFormatter } from '../config';
 import defaultPhoto from './defaultPhoto';
 import { Link } from 'react-router-dom';
+import Bids from '../bids/Bid';
 
 const HouseDetail = () => {
   const { id } = useParams();
@@ -16,7 +17,6 @@ const HouseDetail = () => {
   if (!data) return <div>House not found</div>;
 
   console.log(data);
-  
 
   return (
     <div className='row'>
@@ -65,6 +65,7 @@ const HouseDetail = () => {
         <div className='row'>
           <div className='col-12 mt-3'>{data.description}</div>
         </div>
+        <Bids house={data} />
       </div>
     </div>
   );
