@@ -9,6 +9,7 @@ public class HouseDbContext : DbContext
     }
 
     public DbSet<HouseEntity> Houses => Set<HouseEntity>();
+    public DbSet<BidEntity> Bids => Set<BidEntity>();
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
